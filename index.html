@@ -49,6 +49,46 @@
       margin-top: 1rem;
     }
 
+    .contact-info {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin-bottom: 1rem;
+      font-size: 1.1rem;
+    }
+    .contact-info b {
+      color: var(--light);
+    }
+    .contact-info a {
+      color: var(--accent-blue);
+      text-decoration: none;
+    }
+
+    .contact-form {
+      background: var(--mid-blue);
+      padding: 2rem;
+      border-radius: 8px;
+      width: 100%;
+      max-width: 400px;
+      margin: auto;
+    }
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 0.5rem;
+      margin-bottom: 1rem;
+      border: none;
+      border-radius: 4px;
+    }
+    .contact-form button {
+      background: var(--accent-blue);
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 4px;
+      color: var(--light);
+      cursor: pointer;
+    }
+
     .stats {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -81,11 +121,15 @@
     .highlight-light-blue { color: var(--accent-light-blue); font-weight: bold; }
 
     /* Staffing section */
+    .staffing-cards-wrapper {
+      overflow: hidden;
+      width: 100%;
+    }
     .staffing-cards {
       display: flex;
       gap: 1.5rem;
       margin-top: 1.5rem;
-      animation: scroll-cards 10s linear infinite alternate;
+      animation: scroll-cards 15s linear infinite;
     }
     .staff-card {
       background: var(--mid-blue);
@@ -93,7 +137,7 @@
       border-radius: 12px;
       text-align: center;
       box-shadow: 0 0 10px rgba(30,144,255,0.3);
-      flex: 0 0 350px;
+      flex: 0 0 400px;
     }
     .staff-icon {
       font-size: 2rem;
@@ -149,31 +193,72 @@
       </div>
 
       <h2>Staffing Experience</h2>
-      <div class="staffing-cards">
-        <div class="staff-card">
-          <div class="staff-icon"><i class="fa-solid fa-code"></i></div>
-          <h3>Clutch Tierlist</h3>
-          <span class="role">Developer</span>
-          <p>Members: 299</p>
-          <p>Duration: Ongoing</p>
-          <p>Status: Active</p>
+      <div class="staffing-cards-wrapper">
+        <div class="staffing-cards">
+          <div class="staff-card">
+            <div class="staff-icon"><i class="fa-solid fa-code"></i></div>
+            <h3>Clutch Tierlist</h3>
+            <span class="role">Developer</span>
+            <p>Members: 299</p>
+            <p>Duration: Ongoing</p>
+            <p>Status: Active</p>
+          </div>
+          <div class="staff-card">
+            <div class="staff-icon"><i class="fa-solid fa-code"></i></div>
+            <h3>Vanilla Survival</h3>
+            <span class="role">Developer</span>
+            <p>Members: 800+</p>
+            <p>Duration: Ongoing</p>
+            <p>Status: Active</p>
+          </div>
+          <div class="staff-card">
+            <div class="staff-icon"><i class="fa-solid fa-users"></i></div>
+            <h3>TheCpvper and DatOneKinfE's Community</h3>
+            <span class="role">Co-Owner</span>
+            <p>Members: 50+</p>
+            <p>Duration: Ongoing</p>
+            <p>Status: Active</p>
+          </div>
+          <!-- Duplicate for looping effect -->
+          <div class="staff-card">
+            <div class="staff-icon"><i class="fa-solid fa-code"></i></div>
+            <h3>Clutch Tierlist</h3>
+            <span class="role">Developer</span>
+            <p>Members: 299</p>
+            <p>Duration: Ongoing</p>
+            <p>Status: Active</p>
+          </div>
+          <div class="staff-card">
+            <div class="staff-icon"><i class="fa-solid fa-code"></i></div>
+            <h3>Vanilla Survival</h3>
+            <span class="role">Developer</span>
+            <p>Members: 800+</p>
+            <p>Duration: Ongoing</p>
+            <p>Status: Active</p>
+          </div>
+          <div class="staff-card">
+            <div class="staff-icon"><i class="fa-solid fa-users"></i></div>
+            <h3>TheCpvper and DatOneKinfE's Community</h3>
+            <span class="role">Co-Owner</span>
+            <p>Members: 50+</p>
+            <p>Duration: Ongoing</p>
+            <p>Status: Active</p>
+          </div>
         </div>
-        <div class="staff-card">
-          <div class="staff-icon"><i class="fa-solid fa-code"></i></div>
-          <h3>Vanilla Survival</h3>
-          <span class="role">Developer</span>
-          <p>Members: 800+</p>
-          <p>Duration: Ongoing</p>
-          <p>Status: Active</p>
-        </div>
-        <div class="staff-card">
-          <div class="staff-icon"><i class="fa-solid fa-users"></i></div>
-          <h3>TheCpvper and DatOneKinfE's Community</h3>
-          <span class="role">Co-Owner</span>
-          <p>Members: 50+</p>
-          <p>Duration: Ongoing</p>
-          <p>Status: Active</p>
-        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Contact Me</h2>
+      <div class="contact-info">
+        <div><b>Discord:</b> <a href="#">782k</a></div>
+        <div><b>YouTube:</b> <a href="#">@782k</a></div>
+      </div>
+      <div class="contact-form">
+        <input type="text" placeholder="Name">
+        <input type="email" placeholder="Email">
+        <textarea placeholder="Message" rows="4"></textarea>
+        <button>Send</button>
       </div>
     </section>
   </main>
