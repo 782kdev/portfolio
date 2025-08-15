@@ -82,10 +82,10 @@
 
     /* Staffing section */
     .staffing-cards {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      display: flex;
       gap: 1.5rem;
       margin-top: 1.5rem;
+      animation: scroll-cards 10s linear infinite alternate;
     }
     .staff-card {
       background: var(--mid-blue);
@@ -93,11 +93,7 @@
       border-radius: 12px;
       text-align: center;
       box-shadow: 0 0 10px rgba(30,144,255,0.3);
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-    }
-    .staff-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 0 15px rgba(77,175,255,0.5);
+      flex: 0 0 350px;
     }
     .staff-icon {
       font-size: 2rem;
@@ -115,24 +111,9 @@
       color: var(--accent-light-blue);
     }
 
-    /* Contact form styles */
-    #contact input, #contact textarea {
-      width: 100%;
-      padding: 0.5rem;
-      margin: 0.5rem 0;
-      border: none;
-      border-radius: 5px;
-    }
-    #contact button {
-      background: var(--accent-blue);
-      color: white;
-      padding: 0.75rem 1.5rem;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-    #contact button:hover {
-      background: var(--accent-light-blue);
+    @keyframes scroll-cards {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
     }
   </style>
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
@@ -167,37 +148,7 @@
         </div>
       </div>
 
-      <h2>What Makes Me Different</h2>
-      <p>I am an experienced staff member with a strong record of reliability and effectiveness. Highly active and committed, I treat every server I work on as my own, giving it my all. Numerous staff personnel can vouch for the quality of my work.</p>
-
-      <h2>Skills &amp; Core Strengths</h2>
-      <ul>
-        <li>Good Communication</li>
-        <li>Quick Thinking</li>
-        <li>Staff Mentorship &amp; Training</li>
-        <li>Calm Under Pressure</li>
-        <li>Conflict Resolution</li>
-        <li>Responsible Leadership</li>
-        <li>Community Insight</li>
-      </ul>
-
-      <h2>Proven Impact &amp; What I Bring to Your Server</h2>
-      <p>I bring solid moderation with a fair and unbiased mindset. I'm always ready to help out with support and try to set a good example for both the community and the staff team through how I act and communicate.</p>
-
-      <div class="stat-box">
-        <strong class="highlight-dark-blue">Loyalty &amp; Dedication</strong>
-        <p>When a server values me, I work on it as if it's my own, giving it my all with unwavering commitment.</p>
-      </div>
-      <div class="stat-box">
-        <strong class="highlight-light-blue">Positive Influence</strong>
-        <p>Over half of co-workers agree negativity decreased, and 75% report improved ticket response times.</p>
-      </div>
-    </section>
-
-    <!-- Staffing Experience Section -->
-    <section class="staffing-section">
       <h2>Staffing Experience</h2>
-      <p>A showcase of my experience working across communities in various roles.</p>
       <div class="staffing-cards">
         <div class="staff-card">
           <div class="staff-icon"><i class="fa-solid fa-code"></i></div>
@@ -207,31 +158,22 @@
           <p>Duration: Ongoing</p>
           <p>Status: Active</p>
         </div>
-      </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" style="padding: 2rem; background: var(--mid-blue); border-radius: 12px; margin-top: 2rem;">
-      <h2 style="color: var(--accent-blue); text-align:center; margin-bottom: 1rem;">Contact Me</h2>
-
-      <div style="display:flex; flex-wrap:wrap; gap:1.5rem; justify-content:center; text-align:center;">
-        <div>
-          <p><strong>Discord:</strong> <span class="highlight-light-blue">.782k</span></p>
-          <p><strong>YouTube:</strong> <span class="highlight-dark-blue">@782k</span></p>
+        <div class="staff-card">
+          <div class="staff-icon"><i class="fa-solid fa-code"></i></div>
+          <h3>Vanilla Survival</h3>
+          <span class="role">Developer</span>
+          <p>Members: 800+</p>
+          <p>Duration: Ongoing</p>
+          <p>Status: Active</p>
         </div>
-
-        <form action="YOUR_FORMSPREE_ENDPOINT" method="POST" style="max-width:400px; width:100%; background: var(--dark-blue); padding:1rem; border-radius:8px;">
-          <label for="name">Name</label>
-          <input type="text" name="name" required>
-
-          <label for="email">Email</label>
-          <input type="email" name="email" required>
-
-          <label for="message">Message</label>
-          <textarea name="message" required rows="4"></textarea>
-
-          <button type="submit">Send</button>
-        </form>
+        <div class="staff-card">
+          <div class="staff-icon"><i class="fa-solid fa-users"></i></div>
+          <h3>TheCpvper and DatOneKinfE's Community</h3>
+          <span class="role">Co-Owner</span>
+          <p>Members: 50+</p>
+          <p>Duration: Ongoing</p>
+          <p>Status: Active</p>
+        </div>
       </div>
     </section>
   </main>
